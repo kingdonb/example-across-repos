@@ -1,0 +1,6 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+resources:
+  - dev-team
+patchesStrategicMerge:
+  - https://raw.githubusercontent.com/fluxcd/flux2-multi-tenancy/main/tenants/production/dev-team-patch.yaml
